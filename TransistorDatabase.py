@@ -28,12 +28,12 @@ editCurs = newdatabase.cursor()
 
 #--------------------Pastebin-------------------------------------
 
-key='_dn8SjBoauDF5ej1dxn4jdHl7GmI8UTu'
+key='YourAPIKEY'
 
 login_data={
-    'api_dev_key':'_dn8SjBoauDF5ej1dxn4jdHl7GmI8UTu',
-    'api_user_name':'aalmanmohd',
-    'api_user_password':'pythonproject'
+    'api_dev_key':key,
+    'api_user_name':'YourUsername',
+    'api_user_password':'YourPassword'
     }
 #---------------------/Pastebin-----------------------------------
 
