@@ -100,7 +100,7 @@ def final():
     elif reply == 'NO':
         print('Thank You')
         print('Goodbye!')
-        pass
+        exit()
     else:
         print('Incorrect Input, Try again.')
         final()
