@@ -229,7 +229,7 @@ def vce():
 
 
 def ic():
-    a = str(input('Enter Maximum Power Capacity of transistor (Numeric) : '))
+    a = str(input('Enter Maximum collector current of transistor (Numeric) : '))
     try:
         float(a)
         b = float(a)
@@ -273,7 +273,7 @@ def cc():
 
 
 def hfe():
-    a = str(input('Enter Collector junction capacity of transistor (Numeric) : '))
+    a = str(input('Enter Static current transfer coefficient of transistor (Numeric) : '))
     try:
         float(a)
         b = float(a)
@@ -325,7 +325,7 @@ def newTrans():
         else:
             final()
     else:
-        val = (ID, TransID, Material, Structure, Pc, Vcb, Vce, Veb, Ic, Temp, Ft, Cc, Hfe, Package)
+        val = (ID, TransID, Material, Structure, Pc, Vcb, Vce, Ic, Temp, Ft, Cc, Hfe, Package)
         res = [val, ]
         table = tabulate(res,
                          headers=['ID', 'Serial No.', 'Material', 'Structure', 'Pc', 'Vcb', 'Vec', 'Ic', 'Temp',
