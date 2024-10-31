@@ -19,6 +19,7 @@ API can be tested at https://api.amateurcraft.tech
      ```
   3. Base url for testing http://localhost:8080
 
+## Python Script Details
 ### Functions
   1. Get Information Regarding a certain Transistor
   2. Get Equivalent Transistors of a certain Transistor and their Information
