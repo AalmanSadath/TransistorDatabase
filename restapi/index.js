@@ -2,6 +2,7 @@ const express = require( 'express' );
 var mysql = require('mysql');
 const app = express()
 const PORT = 8080
+const maxID = 4000
 
 app.use( express.json() )
 
@@ -10,11 +11,6 @@ var db = mysql.createConnection({
     user: "nodejs",
     password: "nodejs",
     database: "transistors"
-});
-
-
-db.query('select max(ID) as maxID from bjt', function (err, result) {
-    global.maxID=result[0].maxID
 });
 
 app.listen(PORT, () => {
@@ -57,7 +53,7 @@ app.get('/info/id/:id', (req, res) =>{
     if (isNaN(Number(id))) {
         return res.status(400).send({ message: 'Invalid ID. Please provide a numeric value.' });
     }
-    if(id>global.maxID || id <= 0){
+    if(id>maxID || id <= 0){
         return res.status(404).send({message: `ID ${id} is out of bounds.`})
     }
     var sql = "select * from bjt where ID = " + mysql.escape(id);
@@ -120,7 +116,7 @@ app.get('/equal/id/:id', (req, res) =>{
     if (isNaN(Number(id))) {
         return res.status(400).send({ message: 'Invalid ID. Please provide a numeric value.' });
     }
-    if(id>global.maxID || id <= 0){
+    if(id>maxID || id <= 0){
         return res.status(404).send({message: `ID ${id} is out of bounds.`})
     }   
     var sql = "select * from bjt where ID = " + mysql.escape(id);
