@@ -7,7 +7,7 @@ const maxID = 4000
 app.use( express.json() )
 
 var db = mysql.createConnection({
-    host: "localhost",
+    host: "mysql",
     user: "nodejs",
     password: "nodejs",
     database: "transistors"
