@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: transistors
+      MYSQL_USER: nodejs
+      MYSQL_PASSWORD: nodejs
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./transistors.sql:/docker-entrypoint-initdb.d/transistors.sql
+    networks:
+      - app-network
+    ports:
+      - "3306:3306"
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      DB_HOST: mysql
+      DB_USER: nodejs
+      DB_PASSWORD: nodejs
+      DB_NAME: transistors
+    depends_on:
+      - mysql
+    networks:
+      - app-network
+    ports:
+      - "8080:8080"
+
+volumes:
+  mysql_data:
+
+networks:
+  app-network:
