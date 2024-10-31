@@ -1,5 +1,23 @@
 # TransistorDatabase
-When selecting electronic components such as resistors or capacitors only one or two parameters need to be taken into account. But in the case of transistors, several parameters need to be considered before making a choice. This Python Script helps get information and choose equivalent transistors for an appliance from a database of upto 4000 Transistors.
+When selecting electronic components such as resistors or capacitors only one or two parameters need to be taken into account. But in the case of transistors, several parameters need to be considered before making a choice. This Python Script and API helps get information and choose equivalent transistors for an appliance from a database of upto 4000 Transistors.
+
+## API Details
+Read the [API Documentation](API_README.md) for detailed documentation of the API
+API can be tested at https://api.amateurcraft.tech
+
+### Testing API with docker
+  Requisites: Docker, Docker Compose and git
+
+  1. clone repo and change dir
+     ```
+     git clone https://github.com/AalmanSadath/TransistorDatabase.git
+     cd TransistorDatabase
+     ```
+  2. Build and Run container
+     ```
+     docker-compose up --build
+     ```
+  3. Base url for testing http://localhost:8080
 
 ### Functions
   1. Get Information Regarding a certain Transistor
