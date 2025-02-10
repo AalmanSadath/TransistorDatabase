@@ -4,8 +4,6 @@ When selecting electronic components such as resistors or capacitors only one or
 ## API Details
 Read the [API Documentation](API_README.md) for detailed documentation of the API
 
-The API can be tested at https://api.amateurcraft.tech
-
 ### Testing API with docker
   Requisites: Docker, Docker Compose and git
 
