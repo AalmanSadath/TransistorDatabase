@@ -4,10 +4,6 @@
 
 This REST API allows users to interact with a database of transistors, enabling them to retrieve information and find equivalent transistors. The API serves up to 4000 transistors with various parameters to assist in the selection of suitable electronic components.
 
-## Base URL
-
-`https://api.amateurcraft.tech`
-
 ## Endpoints
 
 ### 1. **Get Transistor Information by Serial Number Pattern**
